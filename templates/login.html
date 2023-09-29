@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
+    <title>Create Account</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='styles/login_style.css') }}"
@@ -72,6 +72,19 @@
       <b>You have an error!</b>
       <p>Please input the correct information next time!</p>
       <button onclick="closeError()">I Will</button>
+    </div>
+
+    <div class="successBox" id="successBox">
+      <a href="{{ url_for('display_captcha')}}">
+        <img
+          src="{{ url_for('static', filename='assets/continue.png') }}"
+          id="continue_symbol"
+        />
+      </a>
+      <h2>Congrats!</h2>
+      <b>You have entered the correct information</b>
+      <p>Please continue</p>
+      <button onclick="toggleSuccess()">OK</button>
     </div>
 
     <div class="loginBox">

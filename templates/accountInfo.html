@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Info</title>
+    <script src="{{ url_for('static', filename='scripts/accountInfo.js') }}"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/account_info_style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="main_div">
+      <h4>Please Confirm CAPTCHA</h4>
+      <input type="text" id="confirmCaptcha" />
+      <h5>How did you hear about this website?</h5>
+      <select id="discoveryOptions">
+        <option value="0">Select an option...</option>
+        <option value="1">
+          I got a LinkedIn recommendation from a colleague who said it was the
+          next big thing
+        </option>
+        <option value="2">
+          While aimlessly browsing the web during a rather unproductive evening
+        </option>
+        <option value="3">
+          Through a Facebook advertisement that was sandwiched between cat
+          videos and a post from my aunt
+        </option>
+        <option value="4">
+          While watching an influencer's YouTube video where they mentioned it
+          only in passing around the 34-minute mark
+        </option>
+        <option value="5">
+          Reddit! In a comment section under a post that had nothing to do with
+          this topic
+        </option>
+        <option value="6">
+          While researching another topic, your website showed up accidentally
+          in my Google search results
+        </option>
+        <option value="7">
+          A teacher in an online course briefly mentioned it, though they forgot
+          the name halfway through
+        </option>
+        <option value="8">
+          Instagram, through a story from someone I don't really follow but they
+          appeared on my explore page
+        </option>
+        <option value="9">
+          I heard some folks discussing it in a cafe and eavesdropped just long
+          enough to hear the name
+        </option>
+        <option value="10">
+          Twitter, but not from someone I follow. It was a retweet of a retweet
+          or something like that
+        </option>
+        <option value="11">
+          Found it bookmarked on a public computer - no idea who bookmarked it
+          though
+        </option>
+        <option value="12">
+          From a lengthy chain email my grandma sent which had a list of 'cool
+          new websites'
+        </option>
+        <option value="13">
+          Pinterest, while looking for DIY crafts. No idea how it came up there
+        </option>
+        <option value="14">
+          A TikTok user who usually does dance videos randomly mentioned it
+        </option>
+        <option value="15">
+          I honestly don't remember, but it was probably during one of my
+          late-night internet adventures
+        </option>
+        <option value="16">
+          A QR code on a poster in a restroom of all places
+        </option>
+        <option value="17">
+          During a work presentation where it was briefly flashed on a slide but
+          not discussed
+        </option>
+        <option value="18">
+          On the news, but not as a feature, it was just opened on a browser in
+          the background
+        </option>
+        <option value="19">
+          Overheard some kids discussing it at a playground
+        </option>
+        <option value="20">
+          In a very niche online forum I sometimes visit for mushroom foraging
+        </option>
+        <option value="21">
+          On a Twitch stream where the streamer opened it accidentally for a
+          second
+        </option>
+        <option value="22">
+          Recommended by a friend, but they sent me the wrong link initially and
+          this was their second guess
+        </option>
+        <option value="23">
+          Through an old-fashioned magazine. Yes, I still read those!
+        </option>
+        <option value="24">
+          A random billboard I drove past on a road trip
+        </option>
+        <option value="25">
+          During a TV show where a character was browsing the internet but
+          didn't actually mention the website
+        </option>
+        <option value="26">
+          While shopping online, it was on a list of 'customers also viewed'
+          products
+        </option>
+        <option value="27">
+          Somebody wrote it down on a piece of paper that I found in a library
+          book
+        </option>
+        <option value="28">
+          From a podcast advertisement, but it took them 10 minutes to actually
+          say the website name
+        </option>
+        <option value="29">
+          While watching a documentary on a completely unrelated topic
+        </option>
+        <option value="30">
+          It was cited in a research paper I was reading, oddly enough
+        </option>
+        <option value="31">
+          My child was randomly typing on the keyboard and this site somehow
+          appeared. Serendipity, I guess?
+        </option>
+        <option value="32">On a business card left at a bus stop</option>
+        <option value="33">
+          During a dream... or at least I think it was a dream?
+        </option>
+        <option value="34">
+          While attending a virtual conference where a participant mistakenly
+          screen-shared this
+        </option>
+        <option value="35">
+          Through a direct mailer, which I rarely open, but something about this
+          one caught my eye
+        </option>
+        <option value="36">
+          At the bottom of a receipt from a totally unrelated purchase
+        </option>
+        <option value="37">
+          On a flyer attached to my windshield wiper after grocery shopping
+        </option>
+        <option value="38">
+          From a chatbot that mistakenly recommended it when I asked for
+          something else
+        </option>
+        <option value="39">
+          Saw it as a tattoo on someone's arm – weird place for a website, I
+          know
+        </option>
+        <option value="40">Bing search, because yes, I still use Bing</option>
+        <option value="41">
+          Snapchat, from a user who usually just posts pictures of their food
+        </option>
+        <option value="42">
+          It was the answer to a crossword puzzle I was doing
+        </option>
+        <option value="43">
+          From a street performer who had it written on their sign
+        </option>
+        <option value="44">
+          In the credits of a movie, for some mysterious reason
+        </option>
+        <option value="45">
+          An audiobook I was listening to had a random advertisement for it in
+          the middle
+        </option>
+        <option value="46">
+          Found it scribbled in the margins of a second-hand book I purchased
+        </option>
+        <option value="47">
+          From an app recommendation but on an app store for a phone I don't
+          even use
+        </option>
+        <option value="48">
+          On a graffiti mural in a very artsy part of town
+        </option>
+        <option value="49">
+          From a virtual reality game where it was a clue to a riddle
+        </option>
+        <option value="50">
+          During a meditation session, it just popped into my mind. Call it
+          divine internet inspiration?
+        </option>
+      </select>
+      <div class="personal-info-form">
+        <h4>Personal Information</h4>
+        <p class="small-text">
+          (We cannot confirm that this data will not be sold immediately on the
+          dark web)
+        </p>
+
+        <div class="row">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required />
+
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+
+        <div class="row">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phoneNumber">Phone:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" />
+        </div>
+
+        <div class="row">
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" />
+        </div>
+
+        <div class="row">
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" />
+
+          <label for="state">State:</label>
+          <input type="text" id="state" name="state" />
+        </div>
+
+        <div class="row">
+          <label for="zipcode">Zip:</label>
+          <input type="text" id="zipcode" name="zipcode" />
+
+          <label for="country">Country:</label>
+          <select id="country" name="country">
+            <option value="tuvalu">Tuvalu</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <input type="submit" value="Submit" />
+      </div>
+      <div id="ageCalc">
+        <h3>Please input your age</h3>
+        <p>This website was created on 9/28/2023.</p>
+        <label for="daysInput"
+          >Enter the number of days that have passed since you were born:</label
+        >
+        <input type="number" id="daysInput" name="days" />
+        <button onclick="calculateBirthDateAndAge()">Submit</button>
+        <p id="result"></p>
+        <button onclick="submitForm()">This is pretty much correct</button>
+      </div>
+
+      <div class="errorBox" id="errorBox">
+        <h2>ATTENTION!</h2>
+        <b>You have an error!</b>
+        <p>
+          Your CAPTCHA might be incorrect, or something else (missing info
+          maybe?)
+        </p>
+        <button onclick="closeError()">I will try again</button>
+      </div>
+
+      <div class="successBox" id="successBox">
+        <a href="{{ url_for('display_login')}}">
+          <button id="confirmButton">Confirm</button>
+        </a>
+        <a href="{{ url_for('display_success')}}">
+          <img
+            src="{{ url_for('static', filename='assets/continue.png') }}"
+            id="continue_symbol"
+          />
+        </a>
+        <h2>Congrats!</h2>
+        <b>You have, against all odds, successfully created your account</b>
+        <p>Please press below to confirm, and complete the signup process!</p>
+        <a href="{{ url_for('display_login')}}">
+          <button id="belowButton">Below</button>
+        </a>
+        <a href="{{ url_for('display_login')}}">
+          <button id="belowtoConfButton">below to confirm</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

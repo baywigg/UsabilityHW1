@@ -39,6 +39,17 @@ function getNotifications() {
   }
 }
 
+function toggleSuccess() {
+  let successbox = document.getElementById("successBox");
+
+  if (successbox.style.visibility == "visible") {
+    successbox.style.visibility = "hidden";
+    removeText();
+  } else {
+    successbox.style.visibility = "visible";
+  }
+}
+
 function closeError() {
   let errorBox = document.querySelectorAll(".errorBox");
 
@@ -158,7 +169,7 @@ function submitForm() {
   let result = validateInputs(username, password);
 
   if (result) {
-    console.log("poggers");
+    toggleSuccess();
   } else {
     togglePopup();
   }

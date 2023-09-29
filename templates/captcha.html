@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAPTCHA</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/captcha_style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='scripts/captchaPage.js') }}"></script>
+  </head>
+  <body>
+    <div class="main_div">
+      <h2>Please complete the CAPTCHA</h1>
+        <div class="captcha-image">
+        </div>
+        <div class="captcha-input">
+            <label for="captcha">Enter the code:</label>
+            <input type="text" id="captcha" oncopy="return false" onpaste="return false" oncut="return false" oncontextmenu="return false">
+
+        </div>
+        <button onclick="submitCaptcha()">Verify</button>
+    </div>
+
+    <div class="successBox" id="successBox">
+        <a href="#" onclick="toggleSuccess(true)">
+          <img
+            src="{{ url_for('static', filename='assets/continue.png') }}"
+            id="continue_symbol"
+          />
+        </a>
+        <h2>Congrats!</h2>
+        <b>You have entered the correct information</b>
+        <p>Please continue</p>
+        <a href="{{ url_for('display_account_info') }}">
+        <button id="continueButton">OK</button>
+    </a>
+      </div>
+  </body>
+</html>

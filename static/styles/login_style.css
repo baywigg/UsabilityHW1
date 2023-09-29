@@ -74,8 +74,8 @@ body {
 .loginBox {
   width: 800px;
   height: 500px;
-  background-color: #f3f4f6; /* Slightly different background color for better contrast */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #f3f4f6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   position: absolute;
   top: 0;
@@ -238,18 +238,39 @@ body {
   font-size: 7px;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1); /* Start at regular size */
-  }
-  50% {
-    transform: scale(1.2); /* Grow by 20% at the halfway point */
-  }
-  100% {
-    transform: scale(1); /* Return to regular size */
-  }
+#successBox {
+  width: 600px;
+  height: 400px;
+  background-color: rgb(99, 255, 153);
+  border: solid black 5px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: auto;
+
+  z-index: 2;
+  visibility: hidden;
+}
+#successBox * {
+  margin: 20px;
+}
+#successBox button {
+  background-color: rgb(0, 147, 34);
+  width: 90px;
+  height: 80px;
 }
 
-.pulse-animation {
-  animation: pulse 0.5s ease-in-out; /* Adjust the time (0.5s) as needed */
+#continue_symbol {
+  width: 18px;
+  position: absolute;
+  right: 0;
+  cursor: default;
 }
