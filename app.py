@@ -10,7 +10,7 @@ def display_login():
 def display_captcha():
     return render_template('captcha.html')
 
-@app.route('/test')
+@app.route('/account_info')
 def display_account_info():
     return render_template('accountInfo.html')
 
