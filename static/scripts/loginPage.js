@@ -6,7 +6,7 @@ function togglePopup() {
   let formElements = document.querySelectorAll(".loginForms");
   let redCircle = document.getElementById("redCircle");
 
-  isPopupVisible = !isPopupVisible; // Toggle the state
+  isPopupVisible = !isPopupVisible;
 
   // Handling the red circle's visibility
 
