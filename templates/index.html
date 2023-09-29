@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/login_style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='scripts/loginPage.js') }}"></script>
+  </head>
+  <body>
+    <div id="image_container" onclick="getNotifications()">
+      <img
+        src="{{ url_for('static', filename='assets/mail_symbol.png') }}"
+        id="mail_symbol"
+      />
+
+      <div id="redCircle"></div>
+    </div>
+
+    <button id="actualSubmit" onclick="submitForm()">Me</button>
+
+    <div id="userPassInstructions">
+      <div id="slider_tab"></div>
+      <div id="username_guidelines">
+        <h2>Username Guidelines</h2>
+        <ul>
+          <li>Must be between<b>10</b>and<b>12</b>characters</li>
+          <li>First character must be lowercase between<b>a</b>-<b>h</b></li>
+          <li>
+            Must contain at least two letters (one uppercase), two numbers, and
+            two special characters
+          </li>
+          <li>
+            Last two characters must be numbers, where the second last number is
+            even and the last number is odd
+          </li>
+          <li>No vowels allowed after the<b>3rd</b>character</li>
+        </ul>
+      </div>
+      <div id="password_guidelines">
+        <h2>Password Guidelines</h2>
+        <ul>
+          <li>Must be exactly<b>16</b>characters</li>
+          <li>
+            First character must be a special character but not the ones used in
+            the username
+          </li>
+          <li>The fourth and twelfth characters must be uppercase letters.</li>
+          <li>
+            Must contain at least<b>1</b>uppercase letter,<b>1</b>lowercase
+            letter,<b>1</b>number, and<b>2</b>special characters
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="overlay" class="popupBox"></div>
+
+    <div class="popupBox" id="popupBox">
+      <h2>ATTENTION!</h2>
+      <b>You have a new notification!</b>
+      <p>Please acknowledge this notification to continue!</p>
+      <button onclick="togglePopup()">OK</button>
+    </div>
+
+    <div class="errorBox" id="errorBox">
+      <h2>ATTENTION!</h2>
+      <b>You have an error!</b>
+      <p>Please input the correct information next time!</p>
+      <button onclick="closeError()">I Will</button>
+    </div>
+
+    <div class="loginBox">
+      <div id="loginText">
+        <h1>Create Username & Password</h1>
+        <p>But be sure to adhere to the guidelines!</p>
+      </div>
+      <div class="loginForms">
+        <form id="user">
+          Username
+          <input type="text" id="user_inp" />
+        </form>
+        <form id="pass">
+          Password
+          <input type="password" id="pass_inp" />
+        </form>
+
+        <button id="submitUserPass" onclick="removeText()">Click Me!</button>
+      </div>
+    </div>
+  </body>
+</html>

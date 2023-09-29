@@ -113,6 +113,7 @@ body {
   align-items: center;
   margin: 0 auto;
   width: 60%;
+  visibility: visible;
 }
 .loginForms input {
   width: 100%;
@@ -175,4 +176,80 @@ body {
   top: 0;
   left: 47px;
   visibility: hidden;
+}
+
+#userPassInstructions {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  position: absolute;
+  background-color: white;
+  width: 400px;
+  height: 100vh;
+  z-index: 5;
+}
+
+#userPassInstructions * {
+  margin: 10px;
+}
+
+#username_guidelines {
+  padding-top: 20px;
+}
+#username_guidelines * {
+  margin-top: 25px;
+}
+
+#password_guidelines {
+  padding-top: 20px;
+}
+#password_guidelines * {
+  margin-top: 25px;
+}
+
+#slider_tab {
+  position: absolute;
+  border-radius: 10px;
+  top: 50%; /* Center vertically */
+  right: -30px; /* Adjust to the desired sticking out value */
+  transform: translateY(-50%); /* Ensures true vertical centering */
+  width: 50px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  background-color: white;
+  text-align: center;
+  line-height: 40px; /* Vertically center text */
+  cursor: pointer;
+  z-index: 4;
+}
+
+#userPassInstructions:hover {
+  transform: translateX(
+    0
+  ); /* On hover, we reset the transform to its original position, revealing the whole div */
+}
+
+#actualSubmit {
+  position: absolute;
+  background-color: rgb(0, 230, 230);
+  border: none;
+  width: 20px;
+  height: 10px;
+  bottom: 10px;
+  right: 10px;
+  font-size: 7px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Start at regular size */
+  }
+  50% {
+    transform: scale(1.2); /* Grow by 20% at the halfway point */
+  }
+  100% {
+    transform: scale(1); /* Return to regular size */
+  }
+}
+
+.pulse-animation {
+  animation: pulse 0.5s ease-in-out; /* Adjust the time (0.5s) as needed */
 }
