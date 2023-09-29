@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aqua;
+}
+
+#errorBox {
+  width: 600px;
+  height: 400px;
+  background-color: rgb(255, 165, 165);
+  outline: 10px solid black;
+  border-radius: 10px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: auto;
+
+  z-index: 2;
+  visibility: hidden;
+}
+
+#errorBox * {
+  padding: 20px;
+}
+
+#popupBox {
+  width: 600px;
+  height: 400px;
+  background-color: white;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: auto;
+
+  z-index: 2;
+  visibility: hidden;
+}
+
+#popupBox * {
+  padding: 20px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  visibility: hidden;
+}
+
+.loginBox {
+  width: 800px;
+  height: 500px;
+  background-color: #f3f4f6; /* Slightly different background color for better contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+
+  margin: auto;
+
+  z-index: 0;
+}
+
+.loginBox * {
+  margin: 10px;
+}
+
+#loginText {
+  margin: 0 auto;
+
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+
+.loginForms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 60%;
+}
+.loginForms input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.loginForms input:focus {
+  border-color: #0077cc;
+}
+
+#user {
+  padding: 5px;
+}
+
+#pass {
+  padding: 5px;
+}
+
+#submitUserPass {
+  background-color: #00ff1a;
+  color: black;
+  padding: 30px 60px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#submitUserPass:hover {
+  background-color: #00cc47;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+#image_container {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#mail_symbol {
+  width: 60px;
+}
+
+#redCircle {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 47px;
+  visibility: hidden;
+}

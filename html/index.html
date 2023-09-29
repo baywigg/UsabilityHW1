@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link rel="stylesheet" href="../styles/login_style.css" />
+    <script src="../scripts/loginPage.js"></script>
+  </head>
+  <body>
+    <button id="testbutton" onclick="togglePopup()"></button>
+    <div id="image_container" onclick="getNotifications()">
+      <img src="../assests/mail_symbol.png" id="mail_symbol" />
+      <div id="redCircle"></div>
+    </div>
+
+    <div id="overlay" class="popupBox"></div>
+
+    <div class="popupBox" id="popupBox">
+      <h2>ATTENTION!</h2>
+      <b>You have a new notification!</b>
+      <p>Please acknowledge this notification to continue!</p>
+      <button onclick="togglePopup()">Hi</button>
+    </div>
+
+    <div class="errorBox" id="errorBox">
+      <h2>ATTENTION!</h2>
+      <b>You have an error!</b>
+      <p>Please input the correct information next time!</p>
+      <button onclick="closeError()">Hi</button>
+    </div>
+
+    <div class="loginBox">
+      <div id="loginText">
+        <h1>Create Username & Password</h1>
+        <p>But be sure to adhere to the guidlines!</p>
+      </div>
+      <div class="loginForms">
+        <form id="user">
+          Username
+          <input type="text" />
+        </form>
+        <form id="pass">
+          Password
+          <input type="password" />
+        </form>
+
+        <button id="submitUserPass" onclick="removeText()">Click Me!</button>
+      </div>
+    </div>
+  </body>
+</html>
